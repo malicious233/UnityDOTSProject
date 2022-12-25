@@ -22,6 +22,7 @@ public struct GameSettingsComponent : IComponentData
 
     public float asteroidVelocity; //You cant set values like "= 10f" here
     public float playerForce;
+    public float playerFriction;
     public float bulletVelocity;
     public int numAsteroids;
     public int levelWidth;

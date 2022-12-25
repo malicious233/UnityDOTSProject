@@ -73,7 +73,7 @@ public partial class AsteroidSpawnSystem : SystemBase
         //Fetches current amount of asteroids in the EntityQuery (Why is the function named like this)
         var count = m_AsteroidQuery.CalculateChunkCountWithoutFiltering();
 
-        //This has to be a local variable. Lovely boilerplate
+        //This has to be a local variable.
         var asteroidPrefab = m_Prefab;
 
         //We will use this to generate random positions
@@ -120,7 +120,7 @@ public partial class AsteroidSpawnSystem : SystemBase
                 var vel = new VelocityComponent { Value = new float3(randomVel.x, randomVel.y, randomVel.z) };
 
                 //Set the velocity component to the one in our prefab.
-                //SetComponent does seemingly not need to know if the component has a VelocityComponent or not. A bit like Monobehavior Getcomponent then??
+                //(So SetComponent does seemingly not need to know if the component has a VelocityComponent or not. A bit like Monobehavior Getcomponent then??)
                 commandBuffer.SetComponent(e, vel);
 
             }
@@ -129,20 +129,5 @@ public partial class AsteroidSpawnSystem : SystemBase
         //This will add our dependency to be played back on the BeginSimulationEntityCommandBuffer... what is a Dependency in this context????
         m_BeginSimECB.AddJobHandleForProducer(Dependency);
 
-        /*
-        Entities.ForEach((ref Translation translation, in Rotation rotation) => {
-            #region Unity generated comment
-            // Implement the work to perform for each entity here.
-            // You should only access data that is local or that is a
-            // field on this job. Note that the 'rotation' parameter is
-            // marked as 'in', which means it cannot be modified,
-            // but allows this job to run in parallel with other jobs
-            // that want to read Rotation component data.
-            // For example,
-            //     translation.Value += math.mul(rotation.Value, new float3(0, 0, 1)) * deltaTime;
-            #endregion
-
-        }).Schedule();
-        */
     }
 }

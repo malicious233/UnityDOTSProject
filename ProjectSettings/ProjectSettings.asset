@@ -154,7 +154,8 @@ PlayerSettings:
   resetResolutionOnWindowResize: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier: {}
+  applicationIdentifier:
+    Standalone: com.DefaultCompany.DOTS-Beeswarm
   buildNumber:
     Standalone: 0
     iPhone: 0
@@ -614,7 +615,8 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   webGLPowerPreference: 2
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    Standalone: HYBRID_ENTITIES_CAMERA_CONVERSION
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}

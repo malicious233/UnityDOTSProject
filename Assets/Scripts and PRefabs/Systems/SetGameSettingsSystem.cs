@@ -18,6 +18,7 @@ public class SetGameSettingsSystem : MonoBehaviour, IConvertGameObjectToEntity
 
     public float asteroidVelocity = 10f;
     public float playerForce = 50f;
+    public float playerFriction = 50f;
     public float bulletVelocity = 500f;
 
     public int numAsteroids = 200;
@@ -39,6 +40,7 @@ public class SetGameSettingsSystem : MonoBehaviour, IConvertGameObjectToEntity
         var settings = default(GameSettingsComponent);
         settings.asteroidVelocity = asteroidVelocity;
         settings.playerForce = playerForce;
+        settings.playerFriction = playerFriction;
         settings.bulletVelocity = bulletVelocity;
 
         settings.numAsteroids = numAsteroids;
