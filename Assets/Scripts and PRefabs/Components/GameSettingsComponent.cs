@@ -24,6 +24,7 @@ public struct GameSettingsComponent : IComponentData
     public float playerForce;
     public float playerFriction;
     public float bulletVelocity;
+    public float bulletFireRate;
     public int numAsteroids;
     public int levelWidth;
     public int levelHeight;

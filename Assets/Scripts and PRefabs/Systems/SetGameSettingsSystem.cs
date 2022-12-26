@@ -5,21 +5,13 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public class SetGameSettingsSystem : MonoBehaviour, IConvertGameObjectToEntity
 {
-    // Add fields to your component here. Remember that:
-    //
-    // * The purpose of this class is to store data for authoring purposes - it is not for use while the game is
-    //   running.
-    // 
-    // * Traditional Unity serialization rules apply: fields must be public or marked with [SerializeField], and
-    //   must be one of the supported types.
-    //
-    // For example,
-    //    public float scale;
+    //My bad, this shouldnt be called a System
 
     public float asteroidVelocity = 10f;
     public float playerForce = 50f;
     public float playerFriction = 50f;
     public float bulletVelocity = 500f;
+    public float bulletFireRate = 50;
 
     public int numAsteroids = 200;
     public int levelWidth = 2048;
@@ -42,6 +34,7 @@ public class SetGameSettingsSystem : MonoBehaviour, IConvertGameObjectToEntity
         settings.playerForce = playerForce;
         settings.playerFriction = playerFriction;
         settings.bulletVelocity = bulletVelocity;
+        settings.bulletFireRate = bulletFireRate;
 
         settings.numAsteroids = numAsteroids;
         settings.levelWidth = levelWidth;
