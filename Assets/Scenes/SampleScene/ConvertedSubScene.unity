@@ -170,8 +170,8 @@ MonoBehaviour:
   asteroidVelocity: 1
   playerForce: 50
   playerFriction: 25
-  bulletVelocity: 35
-  bulletFireRate: 30
+  bulletVelocity: 50
+  bulletFireRate: 10
   numAsteroids: 100
   levelWidth: 100
   levelHeight: 100
