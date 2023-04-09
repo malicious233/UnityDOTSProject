@@ -172,7 +172,7 @@ MonoBehaviour:
   playerFriction: 25
   bulletVelocity: 50
   bulletFireRate: 10
-  numAsteroids: 100
+  numAsteroids: 1000
   levelWidth: 100
   levelHeight: 100
   levelDepth: 100
